@@ -19,8 +19,8 @@ const heroes = [
 const main = document.querySelector("main");
 
 const search = document.querySelector("#search")
-function render(){
-const heroesString = heroes
+function render(data){
+const heroesString = data
   .map(function (hero) {
     return `
     <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
@@ -47,8 +47,16 @@ const heroesString = heroes
 
 function filterHeroes(){
 
+let newHeroesList = heroes.filter(hero => hero.name.toLowerCase().includes(search.value.toLowerCase()))
+
+newHeroesList = heroes.filter(hero => hero.twitter.toLowerCase().includes(search.value.toLowerCase()))
+
+
+console.log(newHeroesList);
+
+render(newHeroesList)
 
 }
 
-render()
+render(heroes)
 search.addEventListener('keyup', filterHeroes)
