@@ -18,6 +18,8 @@ const heroes = [
 
 const main = document.querySelector("main");
 
+const search = document.querySelector("#search")
+function render(){
 const heroesString = heroes
   .map(function (hero) {
     return `
@@ -35,9 +37,18 @@ const heroesString = heroes
                 Follow</button>
         </form>
     </div>
-</article>    
+</article>
     `;
   })
   .join("");
 
-main.innerHTML = heroesString;
+  }
+
+function filterHeroes(){
+
+
+  main.innerHTML = heroesString;
+}
+
+render()
+search.addEventListener('keyup', filterHeroes)
