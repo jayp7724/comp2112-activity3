@@ -47,13 +47,30 @@ const heroesString = data
 
 function filterHeroes(){
 
-let newHeroesList = heroes.filter(hero => hero.name.toLowerCase().includes(search.value.toLowerCase()))
+const newHeroesList = heroes.filter(
+  hero => hero.name.toLowerCase().includes(search.value.toLowerCase())
+)
 
-newHeroesList = heroes.filter(hero => hero.twitter.toLowerCase().includes(search.value.toLowerCase()))
+// newHeroesList2 = heroes.filter(
+//   hero => hero.twitter.toLowerCase().includes(search.value.toLowerCase())
+// )
 
 
-console.log(newHeroesList);
+// console.log(newHeroesList,newHeroesList2);
+// console.log(newHeroesList.filter())
 
+// if (newHeroesList.filter = newHeroesList2) {
+//     let filteredHeroesList = newHeroesList
+//     console.log(newHeroesList,newHeroesList2);
+//
+// }else {
+//
+//   filteredHeroesList = newHeroesList.concat(newHeroesList2);
+//   console.log(newHeroesList,newHeroesList2);
+//
+// }
+//
+//
 render(newHeroesList)
 
 }
