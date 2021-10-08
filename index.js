@@ -42,12 +42,12 @@ const heroesString = heroes
   })
   .join("");
 
+  main.innerHTML = heroesString;
   }
 
 function filterHeroes(){
 
 
-  main.innerHTML = heroesString;
 }
 
 render()
